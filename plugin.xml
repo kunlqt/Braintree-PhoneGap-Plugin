@@ -40,6 +40,11 @@
         <source-file src="src/ios/iOSBraintreePhoneGapPlugin.m"/>
         <header-file src="src/ios/UUIDShortener.h"/>
         <source-file src="src/ios/UUIDShortener.m"/>
+        <header-file src="src/ios/FDKeychain.h"/>
+        <header-file src="src/ios/FDNullOrEmpty.h"/>
+        <source-file src="src/ios/FDKeychain.m"/>
+        
+        
     </platform>
     
 </plugin>
