@@ -1,9 +1,9 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="nl.x-services.plugins.socialsharing"
-    version="4.3.2">
+    id="com.pdg.plugins.braintree"
+    version="0.0.1">
     
-    <name>SocialSharing</name>
+    <name>Braintree PhoneGap</name>
     
     <description>
         Braintree PhoneGap Plugin.
