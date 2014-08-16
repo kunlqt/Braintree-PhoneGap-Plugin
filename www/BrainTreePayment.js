@@ -1,4 +1,4 @@
-/*
+cordova.define("com.pdg.plugins.braintree.BrainTreePayment", function(require, exports, module) {/*
 * PhoneGap plugin for BrainTree payments
 * BrainTreePayment.js
 *
@@ -35,6 +35,13 @@ BrainTreePayment.prototype.init = function(env,sandbox_mid, sandbox_encription_k
 
 };
 
+    BrainTreePayment.prototype.initWithSettings = function(successCallback, failureCallback)
+    {
+        console.log('BrainTreePayment.getCardInfoz start');
+        cordova.exec(successCallback, failureCallback, "BraintreePlugin", "initWithSettings", [])
+        console.log('BrainTreePayment.getCardInfoz done');
+    };
+
 // Get card info asks Braintree library to return encrypted card info or token id card is saved
 //
 BrainTreePayment.prototype.getCardInfo = function(successCallback, failureCallback)
@@ -63,4 +70,4 @@ cordova.addConstructor(function() {
   if(!window.plugins.btreeplugin) {
     window.plugins.btreeplugin = new BrainTreePayment();
   }
-});
+});});

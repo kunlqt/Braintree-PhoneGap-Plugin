@@ -6,7 +6,7 @@
     <name>Braintree PhoneGap</name>
     
     <description>
-        Braintree PhoneGap Plugin.
+        Braintree PhoneGap Plugin for Android and iOS.
     </description>
     
     <author>Kun Le</author>
@@ -46,5 +46,27 @@
         
         
     </platform>
-    
+
+    <!-- android -->
+    <platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="BraintreePlugin">
+                <param name="android-package" value="com.pdg.plugins.braintree.BrainTreePayment" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/AndroidBraintreePhoneGapPlugin.java" target-dir="src/com/pdg/plugins" />
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+            <uses-permission android:name="android.permission.INTERNET"/>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:name="com.braintreepayments.api.dropin.BraintreePaymentActivity" />
+        </config-file>
+
+    </platform>
 </plugin>
